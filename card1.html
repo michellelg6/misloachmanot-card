@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Card 1</title>
+	<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <div>
+	<svg width = "500" height = "500">
+		<defs>
+		<filter id="filter" x="0" y="0">
+		  <feGaussianBlur in="SourceGraphic" stdDeviation="15" />
+		</filter>
+	  </defs>
+	  <defs>
+		<filter id="filter2" x="300" y="300">
+		  <feOffsetResult = "offOut" in="SourceGraphic" dx = "20" dy = "20"/>
+		  <feGaussianBlur in="" stdDeviation="15" />
+		  <feBlend in2="offOut" mode="normal" />
+		</filter>
+	  </defs>
+			<circle cx = "250" cy = "250" r = "250" style = "fill:yellow;"
+			filter = "url(#filter)"/>
+			<circle cx = "250" cy = "250" r = "175" stroke = "red" stroke-width = "5" fill = "blue"/>
+			<defs>
+				<clipPath id="myCircle">
+					<circle cx = "250" cy = "250" r = "150" stroke = "red" stroke-width = "5" fill = "blue"/>
+				</clipPath>
+			</defs>
+			<image  width="100%" height="100%" xlink:href="Purim Card I Image.png" clip-path="url(#myCircle)" />
+			<text font-size = "26px" x="200" y="150" fill="lime" >חג
+			<tspan x="200" y="175"> פורים</tspan>
+			<tspan x="200" y="200">שָׂמֵחַ</tspan>
+			</text>
+			<!--
+			<!--<defs>
+		<filter id="f2" x="0" y="0" width="200%" height="200%">
+		  <feOffset result="offOut" in="SourceGraphic" dx="20" dy="20" />
+		  <feGaussianBlur result="blurOut" in="offOut" stdDeviation="10" />
+		  <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+		</filter>
+	  </defs>
+	  <rect width="90" height="90" stroke="green" stroke-width="3" fill="yellow" filter="url(#f2)"/>-->
+	  
+	</svg>
+	
+	</div>
+	
+</body>
+</html>
